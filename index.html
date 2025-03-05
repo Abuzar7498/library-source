@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Source Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .resources-list li {
+            margin: 10px 0;
+        }
+
+        .resources-list a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .resources-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌟 Source Library 🌟</h1>
+
+        <!-- Articles Section -->
+        <div class="section">
+            <h2>📖 Collection of Articles</h2>
+            <ul class="resources-list">
+                <li><a href="https://www.mindful.org/meditation/mindfulness-getting-started/" target="_blank">Mindfulness Basics</a></li>
+                <li><a href="https://jamesclear.com/goals" target="_blank">The Power of Goal Setting</a></li>
+                <li><a href="https://zenhabits.net/productivity" target="_blank">Zen Habits on Productivity</a></li>
+            </ul>
+        </div>
+
+        <!-- Videos Section -->
+        <div class="section">
+            <h2>🎥 Videos</h2>
+            <ul class="resources-list">
+                <li><a href="https://www.youtube.com/watch?v=w6T02g5hnT4" target="_blank">Mindfulness Explained</a></li>
+                <li><a href="https://www.youtube.com/watch?v=fAdoUjV5ROg" target="_blank">Goal Setting Strategies</a></li>
+                <li><a href="https://www.youtube.com/watch?v=9gGvhdPYdEg" target="_blank">How to Stay Productive</a></li>
+            </ul>
+        </div>
+
+        <!-- Podcasts Section -->
+        <div class="section">
+            <h2>🎙️ Podcasts on Mindfulness & Productivity</h2>
+            <ul class="resources-list">
+                <li><a href="https://www.tenpercent.com/podcast" target="_blank">The Ten Percent Happier Podcast</a></li>
+                <li><a href="https://www.theproductivityshow.com/" target="_blank">The Productivity Show</a></li>
+                <li><a href="https://www.coachingforleaders.com/" target="_blank">Goal Setting & Leadership</a></li>
+            </ul>
+        </div>
+
+        <!-- Goal Setting Section -->
+        <div class="section">
+            <h2>🎯 Goal Setting</h2>
+            <p>Setting goals is crucial for personal and professional growth. Here are some great resources:</p>
+            <ul class="resources-list">
+                <li><a href="https://www.tonyrobbins.com/goal-setting/" target="_blank">Tony Robbins on Goal Setting</a></li>
+                <li><a href="https://www.lifehack.org/articles/productivity/6-tips-successful-goal-setting.html" target="_blank">6 Tips for Effective Goal Setting</a></li>
+            </ul>
+        </div>
+
+        <!-- Notes Section -->
+        <div class="section">
+            <h2>📝 Notes</h2>
+            <textarea id="notes" rows="6" style="width: 100%;"></textarea>
+            <button onclick="saveNotes()">Save Notes</button>
+        </div>
+
+    </div>
+
+    <script>
+        // Save Notes to Local Storage
+        function saveNotes() {
+            const notes = document.getElementById("notes").value;
+            localStorage.setItem("userNotes", notes);
+            alert("Notes Saved!");
+        }
+
+        // Load saved notes on page load
+        window.onload = function() {
+            const savedNotes = localStorage.getItem("userNotes");
+            if (savedNotes) {
+                document.getElementById("notes").value = savedNotes;
+            }
+        };
+    </script>
+
+</body>
+</html>
